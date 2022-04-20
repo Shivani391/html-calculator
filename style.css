@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+.wrapper {
+  background: linear-gradient(
+    180deg,
+    rgba(183, 76, 221, 0.46) 0%,
+    rgba(254, 255, 185, 0.770862) 31.65%,
+    #971090 54.98%,
+    rgba(91, 86, 37, 0.92) 65.27%,
+    rgba(224, 45, 45, 0) 100%
+  );
+  min-height: 100vh;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.calculator {
+  background: rgba(255, 255, 255, 0.3);
+  width: 350px;
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  padding: 2rem;
+}
+.display {
+  background: rgb(255, 255, 255, 0.266);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  box-shadow: -4px 4px 10px rgb(6, 6, 6, 0.2);
+  color: rgb(169, 107, 226);
+  font-weight: bolder;
+  text-align: end;
+  overflow: hidden;
+}
+.btn-area > div {
+  background: rgba(171, 76, 221, 0.9);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  border-radius: 2px;
+  box-shadow: -4px 4px 10px rgb(6, 6, 6, 0.2);
+}
+.btn-area {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  color: white;
+  grid-template-areas:
+    "AC C div multi"
+    "seven eight nine plus"
+    "four five six minus"
+    "one two three ans"
+    "dot zero zero ans";
+}
+.btn-0 {
+  grid-area: zero;
+  /* grid-column-start: 2;
+  grid-column-end: 4; */
+}
+.btn-ans {
+  grid-area: ans;
+  /* grid-column: 4/5; */
+  /* grid-row: 4/6; */
+}
+.btn-AC {
+  grid-area: AC;
+}
+.btn-C {
+  grid-area: C;
+}
+.btn-1 {
+  grid-area: one;
+}
+.btn-2 {
+  grid-area: two;
+}
+.btn-3 {
+  grid-area: three;
+}
+.btn-4 {
+  grid-area: four;
+}
+.btn-5 {
+  grid-area: five;
+}
+.btn-6 {
+  grid-area: six;
+}
+.btn-7 {
+  grid-area: seven;
+}
+.btn-8 {
+  grid-area: eight;
+}
+.btn-9 {
+  grid-area: nine;
+}
+.btn-plus {
+  grid-area: plus;
+}
+.btn-min {
+  grid-area: minus;
+}
+.btn-div {
+  grid-area: div;
+}
+.btn-multi {
+  grid-area: multi;
+}
+.btn-dot {
+  grid-area: dot;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: rgba(195, 0, 255, 0.493);
+  border-radius: 50%;
+
+  position: absolute;
+  left: calc(50% - 250px);
+  bottom: 10vh;
+  z-index: -10;
+}
